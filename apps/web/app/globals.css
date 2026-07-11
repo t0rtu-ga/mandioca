@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-records-primary: #fdc90f;
+  --color-mandioca-black: #2c292a;
+  --color-mandioca-white: #f5f1e6;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
