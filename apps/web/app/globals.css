@@ -2,8 +2,10 @@
 
 @theme {
   --color-records-primary: #fdc90f;
-  --color-mandioca-black: #2c292a;
-  --color-mandioca-white: #f5f1e6;
+  --color-negro-500: #2c292a;
+  --color-negro-700: #1f1d1e;
+  --color-blanco-500: #f5f1e6;
+  --color-blanco-600: #dfdbd1;
 }
 
 :root {
