@@ -1,34 +1,33 @@
 # Borrador Claude — Maqueta "solo Records"
 
 Esta carpeta es una **copia de la maqueta web de Mandioca Records** que vive en el
-proyecto "Mandioca Design System" de claude.ai/design (snapshot del 2026-07-14).
+proyecto "Mandioca Design System" de claude.ai/design (snapshot del 2026-07-14,
+tarjeta "Mandioca · Web (Records) — Fase 1 de lanzamiento: solo Mandioca Records").
 Existe solo en la rama `borrador_claude` — **no es código de producción** y nunca
 se mergea a `main`. El sitio real se construye en `apps/web/` (Next.js).
 
+Vive dentro de `apps/web/public/` a propósito: así la preview de Vercel de esta
+rama la sirve como archivos estáticos y se puede ver con un link normal.
+
 ## Para verla (diseñador 👋)
 
-**Opción A — online, sin instalar nada:**
-abrir este link en el navegador (sirve los archivos de esta rama tal cual):
+**Link directo (preview de Vercel de la rama `borrador_claude`):**
 
-> https://raw.githack.com/t0rtu-ga/mandioca/borrador_claude/borrador_claude/ui_kits/web/records.html
+> https://mandioca-git-borradorclaude-mandioca-collective.vercel.app/borrador-claude/ui_kits/web/records.html
 
-**Opción B — local:** descargar el repo (botón verde *Code → Download ZIP* eligiendo
-la rama `borrador_claude`), y servir esta carpeta con cualquier server estático,
-por ejemplo:
+**Alternativa sin Vercel** (sirve los archivos crudos de la rama desde GitHub):
 
-```bash
-cd borrador_claude
-python3 -m http.server 8000
-# → http://localhost:8000/ui_kits/web/records.html
-```
+> https://raw.githack.com/t0rtu-ga/mandioca/borrador_claude/apps/web/public/borrador-claude/ui_kits/web/records.html
 
-Abrir el archivo con doble click (file://) **no funciona**: la página carga sus
-scripts JSX por red y el navegador lo bloquea sin un servidor.
+**Local:** descargar el repo (rama `borrador_claude`) y servir esta carpeta con un
+server estático (`python3 -m http.server`). Abrir el archivo con doble click
+(file://) **no funciona**: la página carga sus scripts JSX por red y el navegador
+lo bloquea sin un servidor.
 
 ## Qué contiene
 
 ```
-borrador_claude/
+borrador-claude/
 ├── ui_kits/web/records.html   ← LA PÁGINA (variante solo-Records)
 ├── ui_kits/web/site.jsx       ← Nav, Hero, Services, Roster, Footer + contenido
 ├── ui_kits/web/tweaks-panel.jsx
@@ -43,8 +42,10 @@ La página usa React + Babel por CDN (necesita internet). Es un patrón válido
 
 ## Notas de fidelidad (importante)
 
-- El límite de lectura de la herramienta truncó algunos archivos grandes al
-  copiarlos. Se resolvió así:
+- `records.html`, `site.jsx` (todo el contenido visible), tokens y panel de tweaks
+  son copias 1:1 del proyecto de claude.ai/design.
+- El límite de lectura de la herramienta (256 KiB por archivo) truncó algunos
+  archivos grandes al copiarlos. Se resolvió así:
   - `_ds_bundle.js`: se conservaron los **10 componentes completos** y se
     recortaron secciones extra (overlay de YouTube, posts sociales) que esta
     página no usa. Sintaxis verificada con Node.
@@ -60,7 +61,7 @@ La página usa React + Babel por CDN (necesita internet). Es un patrón válido
 ## Flujo de trabajo acordado
 
 1. El diseñador revisa esta maqueta y da feedback.
-2. Las correcciones acordadas se implementan directamente en `apps/web/` (main),
-   ya como código real de Next.js.
+2. Las correcciones acordadas se implementan en `apps/web/` vía ramas de feature
+   que se mergean a `main`, ya como código real de Next.js.
 3. Si la maqueta de claude.ai/design cambia fuerte, se vuelve a snapshotear esta
    carpeta en esta misma rama.
