@@ -1,0 +1,21 @@
+/* ============================================================
+   MANDIOCA · WEBFONTS
+   All families are served from Google Fonts (the exact families
+   specified in the brand manual — no substitutions needed).
+   NOTE: loaded via Google Fonts CSS rather than self-hosted
+   binaries. Swap to local @font-face if offline hosting is needed.
+   ============================================================ */
+
+/* Ubuntu Mono  — display / titles (primary mono family)
+   Ubuntu Sans Mono is not on Google Fonts; Ubuntu Mono covers the
+   monospace display role used across the manual. */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* DM Sans — display / titles (secondary contrast family, w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,9..40,700&display=swap');
+
+/* Work Sans — subtitles & body */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+/* Inter — UI labels, captions, data */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');

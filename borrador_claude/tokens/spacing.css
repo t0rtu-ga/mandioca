@@ -1,0 +1,58 @@
+/* ============================================================
+   MANDIOCA · SPACING, RADIUS, SHADOW & MOTION TOKENS
+   The system is built on an 8px rhythm. Corners are gently
+   rounded (cards 12px, matching the manual's swatch cards).
+   The aesthetic is flat & printed — shadows are used sparingly.
+   ============================================================ */
+
+:root {
+  /* --- Spacing (8px base) --------------------------------- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  40px;
+  --space-8:  48px;
+  --space-9:  64px;
+  --space-10: 80px;
+  --space-11: 120px;
+
+  /* --- Radius --------------------------------------------- */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;  /* default card radius (from manual) */
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill:999px;
+  --radius-full:50%;
+
+  /* --- Borders -------------------------------------------- */
+  --border-hair: 1px;
+  --border-bold: 2px;   /* the brand likes a confident outline */
+  --border-chunky: 3px; /* sticker / poster outlines */
+
+  /* --- Shadows (flat, printed feel — used sparingly) ------ */
+  --shadow-none: none;
+  --shadow-sm:  0 1px 2px rgba(18, 17, 18, 0.08);
+  --shadow-md:  0 4px 16px rgba(18, 17, 18, 0.10);
+  --shadow-lg:  0 12px 40px rgba(18, 17, 18, 0.16);
+  /* Sticker / poster offset shadow — a hard, vintage drop */
+  --shadow-sticker: 4px 4px 0 var(--negro-500);
+  --shadow-sticker-sm: 2px 2px 0 var(--negro-500);
+
+  /* --- Motion --------------------------------------------- */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);   /* @kind other */
+  --ease-in-out:cubic-bezier(0.65, 0, 0.35, 1);   /* @kind other */
+  --ease-spring:cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --dur-fast:   120ms;  /* @kind other */
+  --dur-base:   200ms;  /* @kind other */
+  --dur-slow:   360ms;  /* @kind other */
+
+  /* --- Layout --------------------------------------------- */
+  --container:    1200px;        /* @kind other */
+  --container-narrow: 760px;     /* @kind other */
+  --gutter:       var(--space-5);
+}

@@ -1,0 +1,174 @@
+/* ============================================================
+   MANDIOCA · COLOR TOKENS
+   Foundation palette extracted from the brand manual (Figma).
+   Rule: only use these values. Never invent colors outside the palette.
+   Each piece must respect the color of its sub-brand.
+   ============================================================ */
+
+:root {
+  /* --- AMARILLO · Mandioca Records primary ------------------ */
+  --amarillo-50:  #fffae8;
+  --amarillo-100: #feeeb5;
+  --amarillo-200: #fee691;
+  --amarillo-300: #fedb5e;
+  --amarillo-400: #fdd43f;
+  --amarillo-500: #fdc90f; /* brand yellow */
+  --amarillo-600: #e6b70e;
+  --amarillo-700: #b48f0b;
+  --amarillo-800: #8b6f08;
+  --amarillo-900: #6a5406;
+
+  /* --- NEGRO · Records ink, text & dark grounds ------------- */
+  --negro-50:  #e4e3e3;
+  --negro-100: #bebdbd;
+  --negro-200: #9e9d9d;
+  --negro-300: #787577;
+  --negro-400: #565455;
+  --negro-500: #2c292a; /* brand black */
+  --negro-600: #282526;
+  --negro-700: #1f1d1e;
+  --negro-800: #181717;
+  --negro-900: #121112;
+
+  /* --- BLANCO · warm paper / cream, the signature ground ---- */
+  --blanco-50:  #fefefd; /* Academy paper & letters */
+  --blanco-100: #fcfbf7;
+  --blanco-200: #faf9f4;
+  --blanco-300: #f8f6ee;
+  --blanco-400: #f7f4eb;
+  --blanco-500: #f5f1e6; /* the "paper" background */
+  --blanco-600: #dfdbd1;
+  --blanco-700: #aeaba3;
+  --blanco-800: #87857f;
+  --blanco-900: #676561;
+
+  /* --- VERDE · Mandioca Academy primary -------------------- */
+  --verde-50:  #e8f5ef;
+  --verde-100: #c9e8da;
+  --verde-200: #a0d6be;
+  --verde-300: #72bfa0; /* support tint */
+  --verde-400: #4fb088;
+  --verde-500: #2d9f71; /* brand green */
+  --verde-600: #28865f;
+  --verde-700: #20694b;
+  --verde-800: #194e39;
+  --verde-900: #13432f;
+
+  /* --- MORADO · secondary ---------------------------------- */
+  --morado-50:  #f1eaf4;
+  --morado-100: #decbe6;
+  --morado-200: #c2a0d0;
+  --morado-300: #a675b9;
+  --morado-400: #9259a4;
+  --morado-500: #7e4895; /* brand purple */
+  --morado-600: #6b3c7e;
+  --morado-700: #552f64;
+  --morado-800: #432551;
+  --morado-900: #351e3f;
+
+  /* --- ROJO · strong accents ------------------------------- */
+  --rojo-50:  #fbeae9;
+  --rojo-100: #f5c8c6;
+  --rojo-200: #ec9f9c;
+  --rojo-300: #e27f7c;
+  --rojo-400: #db5f5a;
+  --rojo-500: #d3403b; /* brand red */
+  --rojo-600: #b5332f;
+  --rojo-700: #8e2825;
+  --rojo-800: #6f201e;
+  --rojo-900: #591b19;
+
+  /* --- AZUL · secondary ------------------------------------ */
+  --azul-50:  #ececf4;
+  --azul-100: #c7c6df;
+  --azul-200: #ababd0;
+  --azul-300: #8584ba;
+  --azul-400: #5f5ea9;
+  --azul-500: #494898; /* brand blue */
+  --azul-600: #42428a;
+  --azul-700: #34336c;
+  --azul-800: #282854;
+  --azul-900: #1f1e40;
+
+  /* --- CAFÉ · earth / vintage support ---------------------- */
+  --cafe-50:  #f2ebe5;
+  --cafe-100: #e0d0c4;
+  --cafe-200: #c9ae9b;
+  --cafe-300: #b08e76;
+  --cafe-400: #9d7c67;
+  --cafe-500: #845b41;
+  --cafe-600: #6e4c36;
+  --cafe-700: #573c2b;
+  --cafe-800: #463021;
+  --cafe-900: #37261b;
+
+  /* ==========================================================
+     SEMANTIC ALIASES
+     ========================================================== */
+
+  /* Surfaces & ink (shared) */
+  --paper:          var(--blanco-500); /* warm cream — default ground */
+  --paper-bright:   var(--blanco-50);
+  --surface-card:   #ffffff;           /* swatch / card white */
+  --ink:            var(--negro-500);  /* primary text on light */
+  --ink-soft:       var(--negro-400);
+  --ink-muted:      var(--blanco-900); /* captions, meta */
+  --on-dark:        var(--blanco-500); /* text on black grounds */
+  --on-dark-muted:  var(--blanco-700);
+  --hairline:       var(--blanco-600); /* dividers on paper */
+  --hairline-dark:  var(--negro-700);  /* dividers on black */
+
+  /* Mandioca Records — yellow + black */
+  --records-primary:    var(--amarillo-500);
+  --records-primary-ink:var(--negro-500); /* text ON yellow */
+  --records-ground:     var(--negro-500); /* dark ground */
+  --records-accent:     var(--amarillo-500);
+
+  /* Mandioca Academy — green + cream */
+  --academy-primary:    var(--verde-500);
+  --academy-primary-ink:var(--blanco-50); /* text ON green */
+  --academy-ground:     var(--blanco-50);
+  --academy-tint:       var(--verde-300);
+
+  /* Mandioca Design — red + black */
+  --design-primary:    var(--rojo-500);
+  --design-primary-ink:var(--blanco-50); /* text ON red */
+  --design-ground:     var(--negro-500); /* dark ground */
+  --design-accent:     var(--rojo-500);
+
+  /* Status / feedback (drawn from palette) */
+  --positive:  var(--verde-500);
+  --warning:   var(--amarillo-600);
+  --danger:    var(--rojo-500);
+  --info:      var(--azul-500);
+
+  /* Focus ring */
+  --focus-ring: var(--azul-500);
+
+  /* Active sub-brand theme (default: Records). UI kits & components
+     read these; flip them with the [data-brand="academy"] scope. */
+  --brand-primary:     var(--records-primary);
+  --brand-on-primary:  var(--records-primary-ink);
+  --brand-ground:      var(--records-ground);
+  --brand-accent:      var(--amarillo-500);
+}
+
+/* Sub-brand theme scopes — set data-brand on any container */
+[data-brand="records"] {
+  --brand-primary:    var(--amarillo-500);
+  --brand-on-primary: var(--negro-500);
+  --brand-ground:     var(--negro-500);
+  --brand-accent:     var(--amarillo-500);
+}
+[data-brand="academy"] {
+  --brand-primary:    var(--verde-500);
+  --brand-on-primary: var(--blanco-50);
+  --brand-ground:     var(--verde-900);
+  --brand-accent:     var(--verde-300);
+}
+[data-brand="design"] {
+  --brand-primary:    var(--rojo-500);
+  --brand-on-primary: var(--blanco-50);
+  --brand-ground:     var(--negro-500);
+  --brand-accent:     var(--rojo-500);
+}
